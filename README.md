@@ -13,7 +13,7 @@ Empresas enfrentam dificuldades para escalar, manter e evoluir sistemas monolít
 
 ### Pré-requisitos
 
-- Java 7 (exatamente)
+- Java 8 ou superior
 - Maven 3.x
 
 ### Passos
@@ -24,26 +24,36 @@ Empresas enfrentam dificuldades para escalar, manter e evoluir sistemas monolít
    cd desafio-hackathon-zup-byte
    ```
 
-2. Configure o Java 7:
-   ```bash
-   export JAVA_HOME=/caminho/para/java7
-   export PATH=$JAVA_HOME/bin:$PATH
-   java -version # Deve mostrar 1.7.x
-   ```
-
-3. Compile:
+2. Compile:
    ```bash
    mvn clean compile
    ```
 
-4. Execute:
+3. Execute:
    ```bash
-   mvn exec:java -Dexec.mainClass="com.legacy.Main"
+   MAVEN_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED" mvn exec:java
    ```
+
+4. Rode os testes (nota: alguns testes têm problemas de compatibilidade que fazem parte do desafio):
+   ```bash
+   mvn clean test
+   ```
+
+### Nota sobre Java 9+
+
+O flag `--add-opens java.base/java.lang=ALL-UNNAMED` é **obrigatório** ao usar Java 9 ou superior, pois Spring 4.x com CGLIB precisa acessar métodos protegidos do Java, o que é bloqueado pelo sistema de módulos introduzido no Java 9+.
 
 ### Observações
 
-- Banco de dados H2 em memória: dados não persistem após o encerramento da aplicação.
+- **Problemas de compatibilidade**: Este código foi escrito para Java 7 e com dependências antigas. Alguns testes falham em versões modernas de Java (problemas com Mockito e CGLIB).
+- **Banco de dados**: H2 em memória - dados não persistem após o encerramento da aplicação.
+- **Objetivos do desafio**: Modernizar este código legado, atualizando:
+  - Java 7 → Java 21+
+  - Spring 4 → Spring 6+
+  - Hibernate 4 → Hibernate 6+
+  - JUnit 4 → JUnit 5
+  - Mockito antigo → Mockito moderno
+  - E outras bibliotecas
 - Para modernizar, siga o fluxo detalhado em [CHALLENGE.md](CHALLENGE.md).
 
 ## Contribua

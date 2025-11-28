@@ -1,0 +1,5 @@
+com/legacy/Main.class
+com/legacy/config/AppConfig.class
+com/legacy/dao/EmpresaDAO.class
+com/legacy/service/EmpresaService.class
+com/legacy/model/Empresa.class

@@ -48,7 +48,7 @@ public class EmpresaDAOTest {
     @Test
     public void testListarTodas() {
         List<Empresa> empresas = Collections.singletonList(new Empresa());
-        when(hibernateTemplate.find("from Empresa")).thenReturn(empresas);
+        when(hibernateTemplate.find("from Empresa")).thenReturn((List) empresas);
 
         List<Empresa> resultado = empresaDAO.listarTodas();
         assertEquals(empresas, resultado);
