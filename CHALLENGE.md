@@ -39,9 +39,3 @@ Crie uma solução usando **StackSpot AI** (Code Shift, Multi-Agentes, Actions, 
 - Teste e valide cada etapa com feedbacks rápidos.
 - Mantenha a documentação simples e direta, mas completa.
 - Use métricas para justificar decisões e mostrar impacto.
-
----
-
-Para dúvidas técnicas e colaboração, use Issues ou Pull Requests.
-
-Boa sorte!
