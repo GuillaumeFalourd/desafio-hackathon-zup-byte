@@ -48,7 +48,7 @@ O flag `--add-opens java.base/java.lang=ALL-UNNAMED` é **obrigatório** ao usar
 - **Problemas de compatibilidade**: Este código foi escrito para Java 7 e com dependências antigas. Alguns testes falham em versões modernas de Java (problemas com Mockito e CGLIB).
 - **Banco de dados**: H2 em memória - dados não persistem após o encerramento da aplicação.
 - **Objetivos do desafio**: Modernizar este código legado, atualizando:
-  - Java 7 → Java 21+
+  - Java 8 → Java 21+
   - Spring 4 → Spring 6+
   - Hibernate 4 → Hibernate 6+
   - JUnit 4 → JUnit 5
