@@ -20,8 +20,8 @@ Empresas enfrentam dificuldades para escalar, manter e evoluir sistemas monolít
 
 1. Clone o projeto:
    ```bash
-   git clone https://github.com/seu-usuario/empresa-legacy-modernization.git
-   cd empresa-legacy-modernization
+   git clone https://github.com/seu-usuario/desafio-hackathon-zup-byte.git
+   cd desafio-hackathon-zup-byte
    ```
 
 2. Configure o Java 7:
@@ -40,7 +40,6 @@ Empresas enfrentam dificuldades para escalar, manter e evoluir sistemas monolít
    ```bash
    mvn exec:java -Dexec.mainClass="com.legacy.Main"
    ```
-   *(Certifique-se de ter o exec-maven-plugin configurado no pom.xml)*
 
 ### Observações
 
