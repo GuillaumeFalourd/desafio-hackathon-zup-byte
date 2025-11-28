@@ -1,0 +1,5 @@
+/workspaces/desafio-hackathon-zup-byte/src/main/java/com/legacy/Main.java
+/workspaces/desafio-hackathon-zup-byte/src/main/java/com/legacy/config/AppConfig.java
+/workspaces/desafio-hackathon-zup-byte/src/main/java/com/legacy/dao/EmpresaDAO.java
+/workspaces/desafio-hackathon-zup-byte/src/main/java/com/legacy/model/Empresa.java
+/workspaces/desafio-hackathon-zup-byte/src/main/java/com/legacy/services/EmpresaService.java
