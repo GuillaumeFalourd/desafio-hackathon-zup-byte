@@ -24,7 +24,6 @@ public class EmpresaController {
     
     private EmpresaService empresaService;
     
-    // Setter injection - prática antiga
     public void setEmpresaService(EmpresaService empresaService) {
         this.empresaService = empresaService;
     }
@@ -62,7 +61,6 @@ public class EmpresaController {
         
         ModelAndView mv = new ModelAndView();
         
-        // Validação manual - prática antiga
         String erro = validarDados(nomeFantasia, razaoSocial, cnpj);
         if (erro != null) {
             mv.setViewName("empresa/formulario");
@@ -112,7 +110,6 @@ public class EmpresaController {
         return mv;
     }
     
-    // Método privado com lógica duplicada
     private String validarDados(String nomeFantasia, String razaoSocial, String cnpj) {
         if (nomeFantasia == null || nomeFantasia.trim().isEmpty()) {
             return "Nome fantasia é obrigatório";
