@@ -20,4 +20,15 @@ public class EmpresaDAO extends HibernateDaoSupport {
     public List<Empresa> listarTodas() {
         return (List<Empresa>) getHibernateTemplate().find("from Empresa");
     }
+    
+    public void atualizar(Empresa empresa) {
+        getHibernateTemplate().update(empresa);
+    }
+    
+    public void remover(Long id) {
+        Empresa empresa = buscarPorId(id);
+        if (empresa != null) {
+            getHibernateTemplate().delete(empresa);
+        }
+    }
 }

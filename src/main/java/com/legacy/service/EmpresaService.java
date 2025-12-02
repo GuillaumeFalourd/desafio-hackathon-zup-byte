@@ -19,6 +19,14 @@ public class EmpresaService {
         if (empresa.getCnpj() == null || empresa.getCnpj().length() != 14) {
             throw new IllegalArgumentException("CNPJ inválido");
         }
+        
+        List<Empresa> todas = empresaDAO.listarTodas();
+        for (Empresa e : todas) {
+            if (e.getCnpj().equals(empresa.getCnpj())) {
+                throw new RuntimeException("CNPJ já cadastrado");
+            }
+        }
+        
         empresaDAO.salvar(empresa);
     }
 
