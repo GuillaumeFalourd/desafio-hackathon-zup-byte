@@ -1,7 +1,7 @@
 package com.legacy.controller;
 
 import com.legacy.model.Empresa;
-import com.legacy.services.EmpresaService;
+import com.legacy.service.EmpresaService;
 import com.legacy.util.ValidadorUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
