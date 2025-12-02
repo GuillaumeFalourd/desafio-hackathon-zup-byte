@@ -81,6 +81,10 @@ public class Empresa {
         return Objects.hash(id, cnpj);
     }
 
+    public boolean isAtiva() {
+        return nomeFantasia != null && !nomeFantasia.trim().isEmpty();
+    }
+    
     @Override
     public String toString() {
         return "Empresa{" +
