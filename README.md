@@ -34,9 +34,14 @@ Empresas enfrentam dificuldades para escalar, manter e evoluir sistemas monolít
    MAVEN_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED" mvn exec:java
    ```
 
-4. Rode os testes (nota: alguns testes têm problemas de compatibilidade que fazem parte do desafio):
+4. Rode os testes:
    ```bash
    mvn clean test
+   ```
+
+5. Roda a aplicação executando:
+   ```bash
+   MAVEN_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED" mvn -q -e jetty:run
    ```
 
 ### Nota sobre Java 9+
